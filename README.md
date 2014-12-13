@@ -1,6 +1,6 @@
 # Light
 
-Default theme for [Hexo].
+Theme for [Medicor].
 
 ## Install
 
