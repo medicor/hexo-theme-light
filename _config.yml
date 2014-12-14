@@ -7,10 +7,10 @@ widgets:
 - category
 - tag
 
-excerpt_link: Read More
+excerpt_link: more
 
 twitter:
-  username:
+  username: medicorab
   show_replies: false
   tweet_count: 5
 
@@ -22,15 +22,9 @@ addthis:
   google: true
   pinterest: true
 
-fancybox: true
+fancybox: false
 
 google_analytics:
 rss:
 
-comment_provider: facebook
-# Facebook comment
-facebook:
-  appid: 123456789012345
-  comment_count: 5
-  comment_width: 840
-  comment_colorscheme: light
+comment_provider:
