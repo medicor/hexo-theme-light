@@ -25,3 +25,12 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 })(jQuery);
 </script>
 <% } %>
+<script src="<%- config.root %>js/classie.js"></script>
+<script>
+	document.getElementById('menu-trigger').onclick = function() {
+		var mn = document.getElementById('cbp-spmenu');
+		classie.toggle(this, 'active');
+		classie.toggle(document.body, 'cbp-spmenu-push-toright');
+		classie.toggle(mn, 'cbp-spmenu-open');
+	};
+</script>

@@ -1,21 +1,24 @@
-# Light
+# Lightpush
 
-Theme for [Medicor].
+Theme used at ![Medicor](http://www.medicor.se)'s web site.
+
+Includes:
+* ![Slide and Push menus by Codrops](http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/)
 
 ## Install
 
 Execute the following command and modify `theme` in `_config.yml` to `light`.
 
 ```
-git clone https://github.com/hexojs/hexo-theme-light.git themes/light
+git clone https://github.com/Medicor/Lightpush.git themes/lightpush
 ```
 
 ## Update
 
-Execute the following command to update Light.
+Execute the following command to update Lightpush.
 
 ```
-cd themes/light
+cd themes/lightpush
 git pull
 ```
 
@@ -34,7 +37,7 @@ widgets:
 - tag
 - twitter
 
-excerpt_link: Read More
+excerpt_link: More
 
 twitter:
   username:
@@ -76,9 +79,6 @@ rss:
 ## Features
 
 ### Gallery Post
-
-![](http://i.minus.com/ibp6Hbytwgof9y.jpg)
-
 ```
 ---
 layout: photo
@@ -90,9 +90,6 @@ photos:
 ```
 
 ### Link Post
-
-![](http://i.minus.com/i7hBbGqh14EWo.png)
-
 ```
 ---
 layout: link
@@ -100,14 +97,6 @@ title: Link Post
 link: http://www.google.com/
 ---
 ```
-
-### Tweet Widget
-
-![](http://i.minus.com/iMC8EyF9y0Y3y.PNG)
-
-### Fancybox
-
-![](http://i.minus.com/iHv7h7rZNqHvo.PNG)
 
 [Hexo]: http://zespia.tw/hexo/
 [AddThis]: https://www.addthis.com

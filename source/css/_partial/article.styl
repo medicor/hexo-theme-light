@@ -2,7 +2,7 @@ icon-size = 32px
 icon-gap = 25px
 
 article
-  box-shadow 1px 2px 3px #ddd
+  box-shadow 0px 0px 15px #ccc
   background #fff
   &.page
     padding-left 20px
@@ -34,11 +34,11 @@ article
           vertical-align super
 
   .post-content
-    padding 20px 20px 15px (icon-size + icon-gap + 20)
+    padding 20px (icon-size + icon-gap + 20) 20px (icon-size + icon-gap + 20)
     margin-bottom 50px
     position relative
     @media screen and (max-width: 600px)
-      padding-left 20px
+      padding 20px
 
   .gallery
     overflow hidden
@@ -101,9 +101,9 @@ article
         display none
       &:before
         position absolute
-        font 32px font-icon    
+        font 32px font-icon
         top 0
-        left 0 
+        left 0
         width 32px
         text-align center
 
@@ -123,7 +123,6 @@ article
           text-decoration none
 
   .entry
-    text-align justify
     line-height 1.6
     p, blockquote, ul, ol, dl, table, iframe, h3, h4, h5, h6, .video-container
       margin-top 15px
@@ -175,9 +174,14 @@ article
         border-radius 0
 
     ul, ol, dl
-      margin-left 20px
+      margin 0 0 0 20px
+      padding 0
       ul, ol, dl
         margin-top 0
+
+    li
+      list-style-type square
+      padding-bottom 0.8em
 
     h1, h2
       font-weight normal
