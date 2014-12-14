@@ -1,9 +1,9 @@
 # Lightpush
 
-Theme used at ![Medicor](http://www.medicor.se)'s web site.
+Theme used at [Medicor](http://www.medicor.se)'s web site.
 
 Includes:
-* ![Slide and Push menus by Codrops](http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/)
+* [Slide and Push menus by Codrops](http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/)
 
 ## Install
 
