@@ -27,10 +27,11 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 <% } %>
 <script src="<%- config.root %>js/classie.js"></script>
 <script>
-	document.getElementById('menu-trigger').onclick = function() {
+	document.getElementById('menu-trigger').onclick = function(anEvent) {
 		var mn = document.getElementById('cbp-spmenu');
 		classie.toggle(this, 'active');
-		classie.toggle(document.body, 'cbp-spmenu-push-toright');
+		classie.toggle(this, 'menu-trigger-push-toright');
 		classie.toggle(mn, 'cbp-spmenu-open');
+		anEvent.preventDefault();
 	};
 </script>

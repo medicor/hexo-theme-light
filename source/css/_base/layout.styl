@@ -49,6 +49,22 @@ a
     float none
 
 #menu-trigger
-  position relative
   text-decoration none
+  position fixed
+  outline 0
+  z-index 1
+  @media screen and (max-width: 1260px)
+    left 0
+    top 0
+    background color-background
+    width 100%
+    box-shadow 0px 0px 5px 0px #666
+    padding-top 10px
+    padding-bottom 10px
   
+#menu-trigger:before
+  margin-left 10px
+
+.menu-trigger-push-toright
+  padding-left 240px
+  transition: all 0.3s ease

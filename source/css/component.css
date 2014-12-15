@@ -1,14 +1,15 @@
 /* General styles for all menus */
 .cbp-spmenu {
 	background: #000;
-	opacity: 0.7;
+	opacity: 0.8;
 	position: fixed;
 }
 
 .cbp-spmenu h3 {
 	color: #eee;
 	font-size: 1.8em;
-	padding: 0 15px;
+	padding: 0.7rem;
+	margin: 0;
 }
 
 .cbp-spmenu a {
@@ -38,7 +39,7 @@
 
 .cbp-spmenu-vertical a {
 	border-bottom: 2px solid #666;
-	padding: 0.7em;
+	padding: 0.7rem;
 }
 
 .cbp-spmenu-horizontal {
