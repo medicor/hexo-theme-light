@@ -4,7 +4,7 @@ body
   font-family font-default
   font-size 17px
   margin 0
-  @media screen and (max-width: 1260px)
+  @media screen and (max-width: 1200px)
     margin 0 30px
   @media screen and (max-width: 600px)
     font-size 14px
@@ -40,11 +40,11 @@ a
 .inner
   width page-width
   margin 0 auto
-  @media screen and (max-width: 1260px)
+  @media screen and (max-width: 1200px)
     width 100%
 
 #main-col
-  @media screen and (max-width: 1260px)
+  @media screen and (max-width: 1200px)
     width 100%
   @media screen and (max-width: 900px)
     float none
@@ -54,18 +54,21 @@ a
   position fixed
   outline 0
   z-index 1
-  @media screen and (max-width: 1260px)
+  padding 20px 10px
+  @media screen and (max-width: 1200px)
     left 0
     top 0
     background color-background
     width 100%
     box-shadow 0px 0px 5px 0px #666
-    padding-top 10px
-    padding-bottom 10px
-  
+    padding 10px
+
 #menu-trigger:before
-  margin-left 10px
+  margin 20px
 
 .menu-trigger-push-toright
-  padding-left 240px
+  margin-left 240px
   transition: all 0.3s ease
+  @media screen and (max-width: 900px)
+    margin-left 240px
+  
