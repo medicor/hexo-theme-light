@@ -1,13 +1,17 @@
 menu:
-  Home: /
-  Archives: /archives
+  Home:
+    link: /
+    icon: fa-home
+  Archives:
+    link: /archives
+    icon: fa-archive
 
 widgets:
 - search
 - category
 - tag
 
-excerpt_link: more
+excerpt_link: more ...
 
 twitter:
   username: medicorab
@@ -16,15 +20,11 @@ twitter:
 
 addthis:
   enable: true
-  pubid:
-  facebook: true
-  twitter: true
-  google: true
-  pinterest: true
+  pubid: ra-549341e47fef0807
 
 fancybox: false
 
-google_analytics:
+google_analytics: UA-19223409-1
 rss:
 
 comment_provider:

@@ -1,11 +1,33 @@
 <nav id="cbp-spmenu" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
-	<h3>Pages</h3>
-	<% for (var i in theme.menu) { %>
-		<a href="<%- theme.menu[i] %>"><%= i %></a>
-	<% } %>
+    <h3>Search</h3>
+    <form id="search-form" action="">
+        <input type="search" placeholder="Search stuff ..."/>
+    </form>
+    <div class="search-results">
+        <h4>Posts</h4>
+        <ul>
+            <% site.posts.sort('date', -1).each(function(aPost) { %>
+            <li>
+                <a href="<%= config.root %><%= aPost.path %>"><%= aPost.title %></a>
+            </li>
+            <% }); %>
+        </ul>
+        <h4>Tags</h4>
+        <div class="search-noresult">(no results)</div>
+        <h4>Categories</h4>
+        <div class="search-noresult">(no results)</div>
+    </div>
+    <h3>Pages</h3>
+    <% for (var i in theme.menu) { %>
+        <a href="<%- theme.menu[i].link %>"><span class="fa <%- (theme.menu[i].icon || "fa-chevron-circle-right") %>"></span>&nbsp;<%= i %></a>
+    <% }; %>
+    <h3>Tags</h3>
+    <% for (var i in site.tags) { %>
+        <a href="<%- site.tags[i] %>"><span class="fa fa-chevron-circle-right") %>"></span>&nbsp;<%= i %></a>
+    <% }; %>
 </nav>
 <div class="alignleft">
-	<h1><a href="<%- config.root %>"><%= config.title %></a></h1>
-	<h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
+    <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
+    <h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
 </div>
 <div class="clearfix"></div>

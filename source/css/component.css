@@ -7,8 +7,15 @@
 
 .cbp-spmenu h3 {
 	color: #eee;
-	font-size: 1.8em;
-	padding: 0.7rem;
+	font-size: 1.3em;
+	padding: 1.1rem 0.7rem 0.4rem 0.7rem;
+	margin: 0;
+}
+
+.cbp-spmenu h4 {
+	color: #eee;
+	font-size: 0.9em;
+	padding: 0.7rem 0.7rem 0 0.7rem;
 	margin: 0;
 }
 
@@ -27,6 +34,32 @@
 	background: #afdefa;
 	color: #47a3da;
 }
+
+.cbp-spmenu input, .cbp-spmenu select, .cbp-spmenu textarea {
+	padding: 0.4rem;
+	margin: 0.3rem 0.7rem;
+	width: 90%;
+}
+
+.cbp-spmenu .search-results ul {
+	margin: 0;
+	padding: 0.3rem 0.7rem;
+}
+
+.cbp-spmenu .search-results .search-noresult {
+	font-style: italic;
+	padding: 0.3rem 0.7rem;
+}
+
+.cbp-spmenu .search-results ul li {
+	font-size: 0.8rem;
+	list-style: none inside;
+}
+
+.cbp-spmenu .search-results ul li a {
+	padding: 0.3rem;
+}
+
 
 /* Orientation-dependent styles for the content of the menu */
 
