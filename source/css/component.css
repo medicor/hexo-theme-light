@@ -3,6 +3,7 @@
 	background: #000;
 	opacity: 0.8;
 	position: fixed;
+	overflow: auto;
 }
 
 .cbp-spmenu h3 {
