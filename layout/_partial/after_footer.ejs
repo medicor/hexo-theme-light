@@ -1,11 +1,26 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
-<script src="<%- config.root %>js/gallery.js"></script>
+<script>
+	// PageSpeed Insight optimization.
+	$("head").append('<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />');
+	$("head").append('<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Signika" />');
+</script>
+<script async="true" src="<%- config.root %>js/modernizr.custom.js"></script>
+<script async="true" src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
+<script async="true" src="<%- config.root %>js/gallery.js"></script>
+<script async="true" src="<%- config.root %>js/classie.js"></script>
+<script async="true">
+	document.getElementById('menu-trigger').onclick = function(anEvent) {
+		var mn = document.getElementById('cbp-spmenu');
+		classie.toggle(this, 'active');
+		classie.toggle(this, 'menu-trigger-push-toright');
+		classie.toggle(mn, 'cbp-spmenu-open');
+		anEvent.preventDefault();
+	};
+</script>
 
-<% if (config.disqus_shortname){ %>
-<script type="text/javascript">
+<% if (config.disqus_shortname) { %>
+<script>
 var disqus_shortname = '<%= config.disqus_shortname %>';
-
 (function(){
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
@@ -15,23 +30,3 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 }());
 </script>
 <% } %>
-
-<% if (theme.fancybox){ %>
-<link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="<%- config.root %>fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-<% } %>
-<script src="<%- config.root %>js/classie.js"></script>
-<script>
-	document.getElementById('menu-trigger').onclick = function(anEvent) {
-		var mn = document.getElementById('cbp-spmenu');
-		classie.toggle(this, 'active');
-		classie.toggle(this, 'menu-trigger-push-toright');
-		classie.toggle(mn, 'cbp-spmenu-open');
-		anEvent.preventDefault();
-	};
-</script>
