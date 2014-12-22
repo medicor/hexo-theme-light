@@ -1,6 +1,6 @@
 # Lightpush
 
-Theme used at [Medicor](http://www.medicor.se)'s web site.
+Theme used at [Medicor's](http://www.medicor.se) web site. A lighter version of Hexo's default theme [Light](https://github.com/hexojs/hexo-theme-light).
 
 Includes:
 * [Slide and Push menus by Codrops](http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/)
@@ -33,11 +33,11 @@ menu:
 
 widgets:
 - search
+- social
 - category
 - tag
-- twitter
 
-excerpt_link: More
+excerpt_link: More ...
 
 twitter:
   username:
@@ -52,29 +52,10 @@ addthis:
   google: true
   pinterest: true
 
-fancybox: true
-
 google_analytics:
+
 rss:
 ```
-
-- **menu** - Main navigation menu
-- **widget** - Widgets displaying in sidebar
-- **excerpt_link** - "Read More" link text at the bottom of excerpted articles
-- **twitter** - Twitter widget config
-  - **username** - Twitter username
-  - **show_replies** - Enable displaying replies
-  - **tweet_count** - Tweets display in widget
-- **addthis** - Share buttons at the buttom of articles (Powered by [AddThis])
-  - **enable** - Enable share buttons
-  - **pubid** - Profile ID of [AddThis]
-  - **facebook** - Enable Facebook button
-  - **twitter** - Enable Twitter button
-  - **google** - Enable Google+ button
-  - **pinterest** - Enable Pinterest button
-- **fancybox** - Enable [Fancybox]
-- **google_analytics** - Google Analytics ID
-- **rss** - RSS subscription link (change if using Feedburner)
 
 ## Features
 
@@ -98,6 +79,5 @@ link: http://www.google.com/
 ---
 ```
 
-[Hexo]: http://zespia.tw/hexo/
-[AddThis]: https://www.addthis.com
-[Fancybox]: http://fancyapps.com/fancybox/
+[Hexo]: http://hexo.io/
+[AddThis]: https://www.addthis.com/dashboard/

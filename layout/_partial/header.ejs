@@ -1,40 +1,44 @@
-<nav id="cbp-spmenu" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+<nav id="navigator" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+<% if (theme.widgets.indexOf('search') >= 0) { %>
     <h3>Search</h3>
     <form id="search-form" action="">
-        <input type="search" placeholder="Search stuff ..."/>
+        <input id="search-input" type="search" placeholder="Search stuff ..."/>
     </form>
-    <div class="search-results">
+    <div id="search-results">
         <h4>Posts</h4>
         <ul>
             <% site.posts.sort('date', -1).each(function(aPost) { %>
             <li>
-                <a href="<%= config.root %><%= aPost.path %>"><%= aPost.title %></a>
+                <a href="<%= config.root %><%= aPost.path %>"><span class="fa fa-newspaper-o"></span>&nbsp;<%= aPost.title %></a>
             </li>
             <% }); %>
         </ul>
-        <h4>Tags</h4>
-        <ul>
-            <% site.categories.each(function(aCategory) { %>
-            <li>
-                <a href="<%= config.root + aCategory.path %>"><%= aCategory.name %></a>
-            </li>
-            <% }); %>
-        </ul>
-        <div class="search-noresult">(no results)</div>
-        <h4>Categories</h4>
         <div class="search-noresult">(no results)</div>
     </div>
+<% } %>
+<% if (theme.widgets.indexOf('social') >= 0) { %>
+    <h3>Social</h3>
+        <div class="search-noresult">(nothing yet)</div>
+<% } %>
     <h3>Pages</h3>
     <% for (var i in theme.menu) { %>
         <a href="<%- theme.menu[i].link %>"><span class="fa <%- (theme.menu[i].icon || "fa-chevron-circle-right") %>"></span>&nbsp;<%= i %></a>
     <% }; %>
-    <h3>Tags</h3>
-    <% for (var i in site.tags) { %>
-        <a href="<%- site.tags[i] %>"><span class="fa fa-chevron-circle-right") %>"></span>&nbsp;<%= i %></a>
-    <% }; %>
+<% if (theme.widgets.indexOf('tag') >= 0) { %>
+    <h3>Find by tag</h3>
+    <% site.tags.each(function(aTag) { %>
+		<a class="tax-badge" href="<%= config.root + aTag.path %>"><%= aTag.name %></a>
+    <% }); %>
+<% } %>
+<% if (theme.widgets.indexOf('category') >= 0) { %>
+    <h3>Find by category</h3>
+    <% site.categories.each(function(aCategory) { %>
+		<a class="tax-badge" href="<%= config.root + aCategory.path %>"><%= aCategory.name %></a>
+    <% }); %>
+<% } %>
 </nav>
 <div class="alignleft">
-    <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
+    <h1><a href="<%- config.root %>"><img src="<%- config.root %>images/logo-medicor.png" /><%= config.title %></a></h1>
     <h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
 </div>
 <div class="clearfix"></div>
