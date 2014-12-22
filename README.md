@@ -59,6 +59,12 @@ rss:
 
 ## Features
 
+This theme also supports the following new options in global _config.yml:
+
+``` yaml
+logo: <path to image to put in front of site title>
+favicon: <path to favicon >
+```
 ### Gallery Post
 ```
 ---
