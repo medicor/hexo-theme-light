@@ -7,7 +7,7 @@ Includes:
 
 ## Install
 
-Execute the following command and modify `theme` in `_config.yml` to `light`.
+Execute the following command and modify `theme` in `_config.yml` to `lightpush`.
 
 ```
 git clone https://github.com/Medicor/Lightpush.git themes/lightpush

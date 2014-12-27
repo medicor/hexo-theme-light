@@ -1,29 +1,12 @@
 <nav id="navigator" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
-<% if (theme.widgets.indexOf('search') >= 0) { %>
-    <h3>Search</h3>
-    <form id="search-form" action="">
-        <input id="search-input" type="search" placeholder="Search stuff ..."/>
-    </form>
-    <div id="search-results">
-        <h4>Posts</h4>
-        <ul>
-            <% site.posts.sort('date', -1).each(function(aPost) { %>
-            <li>
-                <a href="<%= config.root %><%= aPost.path %>"><span class="fa fa-newspaper-o"></span>&nbsp;<%= aPost.title %></a>
-            </li>
-            <% }); %>
-        </ul>
-        <div class="search-noresult">(no results)</div>
-    </div>
-<% } %>
-<% if (theme.widgets.indexOf('social') >= 0) { %>
-    <h3>Social</h3>
-        <div class="search-noresult">(nothing yet)</div>
-<% } %>
     <h3>Pages</h3>
     <% for (var i in theme.menu) { %>
         <a href="<%- theme.menu[i].link %>"><span class="fa <%- (theme.menu[i].icon || "fa-chevron-circle-right") %>"></span>&nbsp;<%= i %></a>
     <% }; %>
+<% if (theme.widgets.indexOf('social') >= 0) { %>
+    <h3>Social</h3>
+        <div class="search-noresult">(nothing yet)</div>
+<% } %>
 <% if (theme.widgets.indexOf('tag') >= 0) { %>
     <h3>Find by tag</h3>
     <% site.tags.each(function(aTag) { %>
@@ -35,6 +18,13 @@
     <% site.categories.each(function(aCategory) { %>
 		<a class="tax-badge" href="<%= config.root + aCategory.path %>"><%= aCategory.name %></a>
     <% }); %>
+<% } %>
+<% if (theme.widgets.indexOf('search') >= 0) { %>
+    <form id="search-form" action="">
+        <input id="search-input" type="search" placeholder="Search in posts ..."/>
+    </form>
+    <div id="search-results">
+    </div>
 <% } %>
 </nav>
 <div class="alignleft">

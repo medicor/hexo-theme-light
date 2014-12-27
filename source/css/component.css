@@ -11,6 +11,10 @@
 	width: 100%;
 }
 
+.cbp-spmenu form {
+	overflow: hidden;
+}
+
 /* Orientation-dependent styles for the content of the menu */
 
 .cbp-spmenu-vertical {
