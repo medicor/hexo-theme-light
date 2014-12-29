@@ -4,6 +4,7 @@ Theme used at [Medicor's](http://www.medicor.se) web site. A lighter version of 
 
 Includes:
 * [Slide and Push menus by Codrops](http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/)
+* Post searching through [simple post search api](https://github.com/medicor/hexo-filter-api/)
 
 ## Install
 
@@ -28,33 +29,35 @@ Default config:
 
 ``` yaml
 menu:
-  Home: /
-  Archives: /archives
+  Home:
+    link: /
+    icon: fa-home
+  Archives:
+    link: /archives
+    icon: fa-archive
 
 widgets:
 - search
-- social
 - category
 - tag
 
-excerpt_link: More ...
+excerpt_link: more ...
 
 twitter:
-  username:
+  username: <your-twitter-name>
   show_replies: false
   tweet_count: 5
 
 addthis:
   enable: true
-  pubid:
-  facebook: true
-  twitter: true
-  google: true
-  pinterest: true
+  pubid: ra-XXXXXXXXXXXXXXXX
 
-google_analytics:
+fancybox: false
 
+google_analytics: UA-XXXXXXXX-X
 rss:
+
+comment_provider:
 ```
 
 ## Features
@@ -64,25 +67,6 @@ This theme also supports the following new options in global _config.yml:
 ``` yaml
 logo: <path to image to put in front of site title>
 favicon: <path to favicon >
-```
-### Gallery Post
-```
----
-layout: photo
-title: Gallery Post
-photos:
-- http://i.minus.com/ibobbTlfxZgITW.jpg
-- http://i.minus.com/iedpg90Y0exFS.jpg
----
-```
-
-### Link Post
-```
----
-layout: link
-title: Link Post
-link: http://www.google.com/
----
 ```
 
 [Hexo]: http://hexo.io/
