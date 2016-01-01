@@ -36,10 +36,13 @@
   <% } else { %>
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
-  <meta name="google-site-verification" content="3yEZRHo7iR6Ee9xjOmdQYxlEuCYDjUZXvhHKuvSN39U" />
-  <link rel="icon" href="images/favicon.ico" >
+
+  <% if (config.favicon) { %>
+  <link href="<%- config.root %><%= config.favicon %>" rel="icon">
+  <% } %>
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Slab" />
   <link rel="stylesheet" href="<%- config.root %>css/component.css">
   <link rel="stylesheet" href="<%- config.root %>css/style.css">
+  <%- partial('google_analytics') %>
 </head>
