@@ -5,7 +5,7 @@ menu:
   Archives:
     link: /archives
     icon: fa-archive
-
+    
 widgets:
 - search
 - category
@@ -24,7 +24,7 @@ addthis:
 
 fancybox: false
 
-google_analytics: UA-19223409-1
+google_analytics: UA-19223409-2
 rss:
 
 comment_provider:
